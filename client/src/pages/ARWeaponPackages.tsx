@@ -30,7 +30,7 @@ export default function ARWeaponPackages() {
       {/* Header */}
       <section className="container py-16">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
@@ -51,18 +51,18 @@ export default function ARWeaponPackages() {
             return (
               <motion.div
                 key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.05 }}
-                viewport={{ once: true }}
-                className={`bg-card text-card-foreground rounded-lg border border-border p-6 transition-all duration-300 shadow-md hover:shadow-lg hover:border-primary/50 hover:-translate-y-1 ${idx === packs.length - 1 ? "border-l-4 border-l-primary" : ""}`}
+                
+                className={`premium-card-base ${idx === packs.length - 1 ? "border-l-4 border-l-primary" : ""}`}
               >
                 <div className="text-4xl mb-4">{pack.icon}</div>
 
                 <h3 className="text-2xl font-bold text-primary mb-2">{pack.name}</h3>
 
                 <div className="mb-6 pb-6 border-b border-border">
-                  <div className="text-4xl md:text-5xl font-bold text-primary mb-2">{pack.price}</div>
+                  <div className="price-badge text-primary mb-2">{pack.price}</div>
                   <p className="text-sm text-foreground/60">One-time purchase</p>
                 </div>
 

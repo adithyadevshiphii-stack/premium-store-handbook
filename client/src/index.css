@@ -129,6 +129,8 @@
   body {
     @apply bg-background text-foreground;
     font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0a0e27 0%, #0f1535 50%, #0a0e27 100%);
+    background-attachment: fixed;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
@@ -146,12 +148,17 @@
     font-family: 'Orbitron', sans-serif;
     font-weight: 700;
     letter-spacing: 0.05em;
+    background: linear-gradient(135deg, #d4af37 0%, #e8c547 50%, #d4af37 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
   
   h1 {
     @apply text-4xl md:text-5xl lg:text-6xl;
     font-weight: 900;
     letter-spacing: 0.08em;
+    text-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
   }
   
   h2 {
@@ -194,5 +201,170 @@
       padding-right: 2rem;
       max-width: 1280px;
     }
+  }
+
+  /* Premium Gradient Text */
+  .gradient-text {
+    background: linear-gradient(135deg, #d4af37 0%, #e8c547 50%, #d4af37 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Premium Glow Effect */
+  .glow-primary {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3), 0 0 40px rgba(212, 175, 55, 0.15);
+  }
+
+  .glow-accent {
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.3), 0 0 40px rgba(0, 212, 255, 0.15);
+  }
+
+  .glow-destructive {
+    box-shadow: 0 0 20px rgba(230, 57, 70, 0.3), 0 0 40px rgba(230, 57, 70, 0.15);
+  }
+
+  /* Premium Card with Glass Morphism */
+  .premium-card-base {
+    background: rgba(26, 31, 58, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    border-radius: 12px;
+    padding: 24px;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+
+  .premium-card-base:hover {
+    background: rgba(26, 31, 58, 0.9);
+    border-color: rgba(212, 175, 55, 0.3);
+    box-shadow: 0 20px 40px rgba(212, 175, 55, 0.1), 0 0 20px rgba(0, 212, 255, 0.05);
+    transform: translateY(-8px);
+  }
+
+  /* Featured Card with Enhanced Glow */
+  .featured-card-base {
+    position: relative;
+    background: linear-gradient(135deg, rgba(26, 31, 58, 0.8) 0%, rgba(26, 31, 58, 0.6) 100%);
+    border: 2px solid #d4af37;
+    border-left: 4px solid #d4af37;
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.2), inset 0 0 20px rgba(212, 175, 55, 0.05);
+  }
+
+  .featured-card-base::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.5), transparent);
+  }
+
+  .featured-card-base:hover {
+    box-shadow: 0 0 50px rgba(212, 175, 55, 0.3), inset 0 0 30px rgba(212, 175, 55, 0.1);
+    transform: translateY(-12px);
+    border-color: #e8c547;
+  }
+
+  /* Price Badge */
+  .price-badge {
+    font-size: 3.5rem;
+    font-weight: 900;
+    font-family: 'Orbitron', sans-serif;
+    background: linear-gradient(135deg, #d4af37 0%, #e8c547 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+  }
+
+  /* Section Divider */
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent);
+    margin: 3rem 0;
+  }
+
+  /* Premium Button */
+  .premium-btn {
+    position: relative;
+    padding: 12px 32px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    border: 2px solid #d4af37;
+    background: linear-gradient(135deg, #d4af37 0%, #e8c547 100%);
+    color: #0a0e27;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+
+  .premium-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: left 0.3s ease;
+  }
+
+  .premium-btn:hover::before {
+    left: 100%;
+  }
+
+  .premium-btn:hover {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+    transform: translateY(-2px);
+  }
+
+  /* Comparison Table Premium Style */
+  .premium-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .premium-table thead tr {
+    border-bottom: 2px solid rgba(212, 175, 55, 0.3);
+    background: rgba(212, 175, 55, 0.05);
+  }
+
+  .premium-table th {
+    padding: 16px;
+    text-align: left;
+    font-weight: 600;
+    color: #d4af37;
+    letter-spacing: 0.05em;
+  }
+
+  .premium-table tbody tr {
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+    transition: background 0.2s ease;
+  }
+
+  .premium-table tbody tr:hover {
+    background: rgba(212, 175, 55, 0.05);
+  }
+
+  .premium-table td {
+    padding: 14px 16px;
+  }
+
+  /* Inclusion List */
+  .inclusion-item {
+    display: flex;
+    gap: 12px;
+    padding: 10px 0;
+    align-items: flex-start;
+  }
+
+  .inclusion-item::before {
+    content: '✓';
+    color: #d4af37;
+    font-weight: bold;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
   }
 }

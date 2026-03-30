@@ -109,7 +109,7 @@ export default function PlayerSupportPackages() {
       {/* Header */}
       <section className="container py-16">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
@@ -129,11 +129,11 @@ export default function PlayerSupportPackages() {
           {packages.map((pkg, idx) => (
             <motion.div
               key={idx}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
               transition={{ duration: 0.4, delay: idx * 0.05 }}
-              viewport={{ once: true }}
-              className={`bg-card text-card-foreground rounded-lg border border-border p-6 transition-all duration-300 shadow-md hover:shadow-lg hover:border-primary/50 hover:-translate-y-1 ${pkg.featured ? "border-l-4 border-l-primary" : ""} border-l-4 ${pkg.borderColor}`}
+              
+              className={`premium-card-base ${pkg.featured ? "border-l-4 border-l-primary" : ""} border-l-4 ${pkg.borderColor}`}
             >
               <div className="flex items-start justify-between mb-6">
                 <div>
@@ -150,7 +150,7 @@ export default function PlayerSupportPackages() {
               </div>
 
               <div className="mb-6 pb-6 border-b border-border">
-                <div className="text-4xl md:text-5xl font-bold mb-2">{pkg.price}</div>
+                <div className="price-badge mb-2">{pkg.price}</div>
                 <p className="text-sm text-foreground/60">{pkg.validity}</p>
               </div>
 
@@ -179,7 +179,7 @@ export default function PlayerSupportPackages() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">Why These Packages?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold gradient-text mb-8">Why These Packages?</h2>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

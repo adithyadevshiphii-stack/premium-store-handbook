@@ -59,7 +59,7 @@ export default function PremiumGuidelines() {
       {/* Header */}
       <section className="container py-16">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
@@ -78,10 +78,10 @@ export default function PremiumGuidelines() {
           {guidelines.map((guideline, idx) => (
             <motion.div
               key={idx}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
               transition={{ duration: 0.4, delay: idx * 0.05 }}
-              viewport={{ once: true }}
+              
               className="bg-card text-card-foreground rounded-lg border border-border p-6 transition-all duration-300 shadow-md hover:shadow-lg hover:border-primary/50 hover:-translate-y-1"
             >
               <div className="flex items-start gap-4">
@@ -105,7 +105,7 @@ export default function PremiumGuidelines() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">Important Notes</h2>
+            <h2 className="text-3xl md:text-4xl font-bold gradient-text mb-8">Important Notes</h2>
           </motion.div>
 
           <div className="space-y-6">
@@ -139,10 +139,10 @@ export default function PremiumGuidelines() {
       {/* CTA Section */}
       <section className="container py-24">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          
           className="text-center"
         >
           <h2 className="text-3xl font-bold mb-6">Ready to Upgrade?</h2>

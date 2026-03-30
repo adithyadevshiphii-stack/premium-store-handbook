@@ -1,37 +1,66 @@
-import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, Sparkles } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const sections = [
-  { title: "Premium Guidelines", href: "/premium-guidelines", icon: "📋" },
-  { title: "Vanity Phone Numbers", href: "/vanity-phone-numbers", icon: "📱" },
-  { title: "Player Support Packages", href: "/player-support-packages", icon: "⭐", highlight: true },
-  { title: "Black Money Packs", href: "/black-money-packs", icon: "💰" },
-  { title: "AR Weapon Packages", href: "/ar-weapon-packages", icon: "🔫" },
-  { title: "BIG C and BIG J Packs", href: "/big-c-and-big-j-packs", icon: "🌿" },
-  { title: "Combo Packs", href: "/combo-packs", icon: "📦", highlight: true },
-  { title: "Custom Vehicle Access", href: "/custom-vehicle-access", icon: "🚗" },
-  { title: "Custom House Access", href: "/custom-house-access", icon: "🏠" },
-  { title: "Business Ownership Packages", href: "/business-ownership-packages", icon: "💼", highlight: true },
-  { title: "Gang Packages", href: "/gang-packages", icon: "👥", highlight: true },
+  { title: "Premium Guidelines", href: "/premium-guidelines", icon: "📋", desc: "Server rules and approval process" },
+  { title: "Vanity Phone Numbers", href: "/vanity-phone-numbers", icon: "📱", desc: "Custom phone numbers" },
+  { title: "Player Support Packages", href: "/player-support-packages", icon: "⭐", desc: "Support tier packages", highlight: true },
+  { title: "Black Money Packs", href: "/black-money-packs", icon: "💰", desc: "Illicit currency bundles" },
+  { title: "AR Weapon Packages", href: "/ar-weapon-packages", icon: "🔫", desc: "Assault rifle collections" },
+  { title: "BIG C and BIG J Packs", href: "/big-c-and-big-j-packs", icon: "🌿", desc: "Consumable supplies" },
+  { title: "Combo Packs", href: "/combo-packs", icon: "📦", desc: "Complete bundles", highlight: true },
+  { title: "Custom Vehicle Access", href: "/custom-vehicle-access", icon: "🚗", desc: "Exclusive vehicles" },
+  { title: "Custom House Access", href: "/custom-house-access", icon: "🏠", desc: "Residential properties" },
+  { title: "Business Ownership Packages", href: "/business-ownership-packages", icon: "💼", desc: "Business ventures", highlight: true },
+  { title: "Gang Packages", href: "/gang-packages", icon: "👥", desc: "Gang organization bundles", highlight: true },
 ];
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5 },
+  },
+};
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+      <nav className="sticky top-0 z-50 bg-background/60 backdrop-blur-xl border-b border-border">
         <div className="container py-4 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
-              <span className="text-background font-bold text-lg">PSH</span>
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            className="flex items-center gap-3"
+          >
+            <div className="w-12 h-12 bg-gradient-to-br from-primary via-primary/80 to-accent rounded-xl flex items-center justify-center shadow-lg glow-primary">
+              <span className="text-background font-black text-lg tracking-wider">PSH</span>
             </div>
-            <h1 className="text-xl font-bold text-primary">Premium Store</h1>
-          </div>
-          <Button variant="outline" size="sm">
-            Contact Support
-          </Button>
+            <div>
+              <h1 className="text-xl font-bold gradient-text">Premium Store</h1>
+              <p className="text-xs text-foreground/60">Official Handbook</p>
+            </div>
+          </motion.div>
+          <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }}>
+            <Button variant="outline" size="sm" className="border-primary/50 hover:border-primary">
+              Contact Support
+            </Button>
+          </motion.div>
         </div>
       </nav>
 
@@ -44,181 +73,165 @@ export default function Home() {
               "url('https://d2xsxph8kpxj0f.cloudfront.net/310519663494392763/FtFaQwREi5ZpTonTRx3Xud/hero-dark-premium-TAxTfmjjizDHe3xim2Nptj.webp')",
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/70 to-background" />
+          <div className="absolute inset-0 bg-radial-gradient from-primary/5 via-transparent to-transparent opacity-40" />
         </div>
 
-        <div className="relative container py-24 md:py-32 lg:py-40">
+        <div className="relative container py-24 md:py-40 lg:py-56">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-2xl"
+            transition={{ duration: 0.8 }}
+            className="max-w-3xl"
           >
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-primary mb-6">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+              className="flex items-center gap-2 mb-6"
+            >
+              <Sparkles size={20} className="text-primary" />
+              <span className="text-sm font-semibold text-primary tracking-widest uppercase">
+                Official Premium Portal
+              </span>
+            </motion.div>
+
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-black mb-8 leading-tight">
               Premium Store Handbook
             </h1>
-            <p className="text-lg md:text-xl text-foreground/80 mb-8 max-w-xl">
+
+            <p className="text-xl md:text-2xl text-foreground/80 mb-12 max-w-2xl leading-relaxed font-light">
               Official pricing portal for premium packages, bundles, and exclusive access. Designed to make upgrades feel smarter and bundles feel stronger.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.6 }}
+              className="flex flex-col sm:flex-row gap-4"
+            >
+              <Button
+                size="lg"
+                className="premium-btn text-lg px-8 py-6 h-auto"
+              >
                 Explore Packages
+                <ChevronRight size={20} className="ml-2" />
               </Button>
-              <Button size="lg" variant="outline">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-primary/50 hover:border-primary text-lg px-8 py-6 h-auto"
+              >
                 Read Guidelines
               </Button>
-            </div>
+            </motion.div>
           </motion.div>
         </div>
       </section>
 
+      {/* Section Divider */}
+      <div className="section-divider" />
+
       {/* Sections Grid */}
-      <section className="container py-24">
+      <section className="container py-32">
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          
+          className="mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">Browse All Sections</h2>
+          <h2 className="text-4xl md:text-5xl font-black mb-4">Browse All Sections</h2>
+          <p className="text-lg text-foreground/60 max-w-2xl">
+            Explore our comprehensive collection of premium packages, each carefully designed to provide exceptional value and exclusive benefits.
+          </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
           {sections.map((section, idx) => (
-            <motion.div
-              key={section.href}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: idx * 0.05 }}
-              viewport={{ once: true }}
-            >
+            <motion.div key={section.href} variants={itemVariants}>
               <Link href={section.href}>
                 <div
-                  className={`bg-card text-card-foreground rounded-lg border border-border p-6 transition-all duration-300 shadow-md hover:shadow-lg hover:border-primary/50 hover:-translate-y-1 group block h-full cursor-pointer ${
-                    section.highlight ? "border-l-4 border-l-primary" : ""
+                  className={`premium-card-base group cursor-pointer h-full flex flex-col ${
+                    section.highlight ? "featured-card-base lg:col-span-1" : ""
                   }`}
                 >
-                  <div className="flex items-start justify-between mb-4">
-                    <span className="text-4xl">{section.icon}</span>
+                  <div className="flex items-start justify-between mb-6">
+                    <span className="text-5xl group-hover:scale-110 transition-transform duration-300">
+                      {section.icon}
+                    </span>
                     {section.highlight && (
-                      <span className="text-xs font-bold text-primary bg-primary/10 px-2 py-1 rounded">
-                        FEATURED
-                      </span>
+                      <motion.span
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        className="text-xs font-black text-primary bg-primary/20 px-3 py-1 rounded-full uppercase tracking-widest"
+                      >
+                        Featured
+                      </motion.span>
                     )}
                   </div>
-                  <h3 className="text-lg font-bold mb-2 group-hover:text-primary transition-colors">
+
+                  <h3 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors duration-300">
                     {section.title}
                   </h3>
-                  <p className="text-sm text-foreground/60 mb-4">
-                    Explore this section to view all available packages and pricing.
+
+                  <p className="text-sm text-foreground/60 mb-6 flex-grow">
+                    {section.desc}
                   </p>
-                  <div className="flex items-center gap-2 text-primary opacity-0 group-hover:opacity-100 transition-opacity">
-                    <span className="text-sm font-semibold">View</span>
-                    <ChevronRight size={16} />
+
+                  <div className="flex items-center gap-2 text-primary opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-0 group-hover:translate-x-2">
+                    <span className="text-sm font-semibold">Explore</span>
+                    <ChevronRight size={18} />
                   </div>
                 </div>
               </Link>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </section>
 
-      {/* Key Features */}
-      <section className="bg-card/50 border-t border-border py-24">
+      {/* Section Divider */}
+      <div className="section-divider" />
+
+      {/* CTA Section */}
+      <section className="container py-32">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          
+          className="premium-card-base featured-card-base text-center py-16 px-8"
+        >
+          <h2 className="text-4xl md:text-5xl font-black mb-6">Ready to Upgrade?</h2>
+          <p className="text-lg text-foreground/70 mb-8 max-w-2xl mx-auto">
+            Choose your perfect package and unlock exclusive benefits. All purchases come with staff approval and full support.
+          </p>
+          <Button size="lg" className="premium-btn text-lg px-8 py-6 h-auto">
+            View All Packages
+            <ChevronRight size={20} className="ml-2" />
+          </Button>
+        </motion.div>
+      </section>
+
+      {/* Footer */}
+      <footer className="border-t border-border bg-background/50 py-12 mt-16">
         <div className="container">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
+            className="text-center text-sm text-foreground/60"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">Why Choose Premium?</h2>
+            <p className="mb-2">&copy; 2026 Premium Store Handbook. All rights reserved.</p>
+            <p className="text-xs">Official pricing portal for premium packages and exclusive access.</p>
           </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Value-Balanced Pricing",
-                description:
-                  "Small purchases remain available, but larger packs are intentionally priced to feel smarter.",
-              },
-              {
-                title: "Bundles Feel Stronger",
-                description:
-                  "Gang bundles and premium bundles are positioned as the best-value options for serious players.",
-              },
-              {
-                title: "Official & Secure",
-                description:
-                  "All purchases are official, non-transferable, and subject to server rules and staff approval.",
-              },
-            ].map((feature, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: idx * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-card text-card-foreground rounded-lg border border-border p-6 transition-all duration-300 shadow-md hover:shadow-lg hover:border-primary/50 hover:-translate-y-1"
-              >
-                <h3 className="text-lg font-bold text-primary mb-3">{feature.title}</h3>
-                <p className="text-foreground/70">{feature.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="border-t border-border bg-background/50 py-12">
-        <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-            <div>
-              <h4 className="font-bold text-primary mb-4">Premium Store</h4>
-              <p className="text-sm text-foreground/60">
-                Official pricing portal for roleplay server premium packages.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-bold text-primary mb-4">Quick Links</h4>
-              <ul className="space-y-2 text-sm">
-                <li>
-                  <Link href="/premium-guidelines">
-                    <a className="text-foreground/60 hover:text-primary transition-colors">Guidelines</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/player-support-packages">
-                    <a className="text-foreground/60 hover:text-primary transition-colors">Support Packages</a>
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-bold text-primary mb-4">Categories</h4>
-              <ul className="space-y-2 text-sm">
-                <li>
-                  <Link href="/gang-packages">
-                    <a className="text-foreground/60 hover:text-primary transition-colors">Gang Packages</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/combo-packs">
-                    <a className="text-foreground/60 hover:text-primary transition-colors">Combo Packs</a>
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-bold text-primary mb-4">Support</h4>
-              <p className="text-sm text-foreground/60">
-                Questions? Contact our support team for assistance with purchases.
-              </p>
-            </div>
-          </div>
-          <div className="border-t border-border pt-8 text-center text-sm text-foreground/60">
-            <p>&copy; 2026 Premium Store Handbook. All rights reserved.</p>
-          </div>
         </div>
       </footer>
     </div>

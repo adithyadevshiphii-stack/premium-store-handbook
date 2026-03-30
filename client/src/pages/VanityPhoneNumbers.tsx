@@ -28,7 +28,7 @@ export default function VanityPhoneNumbers() {
       {/* Header */}
       <section className="container py-16">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
@@ -47,11 +47,11 @@ export default function VanityPhoneNumbers() {
           {packages.map((pkg, idx) => (
             <motion.div
               key={idx}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
               transition={{ duration: 0.4, delay: idx * 0.1 }}
-              viewport={{ once: true }}
-              className={`bg-card text-card-foreground rounded-lg border border-border p-6 transition-all duration-300 shadow-md hover:shadow-lg hover:border-primary/50 hover:-translate-y-1 ${idx === 2 ? "border-l-4 border-l-primary" : ""}`}
+              
+              className={`premium-card-base ${idx === 2 ? "border-l-4 border-l-primary" : ""}`}
             >
               <div className="mb-6">
                 <h3 className="text-2xl font-bold text-primary mb-2">{pkg.digits}</h3>
@@ -59,7 +59,7 @@ export default function VanityPhoneNumbers() {
               </div>
 
               <div className="mb-6">
-                <div className="text-4xl md:text-5xl font-bold text-primary mb-2">{pkg.price}</div>
+                <div className="price-badge text-primary mb-2">{pkg.price}</div>
                 <p className="text-sm text-foreground/60">One-time purchase</p>
               </div>
 
