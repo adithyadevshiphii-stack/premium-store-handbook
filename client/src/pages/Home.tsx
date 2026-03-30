@@ -93,8 +93,8 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <Link href={section.href}>
-                <a
-                  className={`bg-card text-card-foreground rounded-lg border border-border p-6 transition-all duration-300 shadow-md hover:shadow-lg hover:border-primary/50 hover:-translate-y-1 group block h-full ${
+                <div
+                  className={`bg-card text-card-foreground rounded-lg border border-border p-6 transition-all duration-300 shadow-md hover:shadow-lg hover:border-primary/50 hover:-translate-y-1 group block h-full cursor-pointer ${
                     section.highlight ? "border-l-4 border-l-primary" : ""
                   }`}
                 >
@@ -116,7 +116,7 @@ export default function Home() {
                     <span className="text-sm font-semibold">View</span>
                     <ChevronRight size={16} />
                   </div>
-                </a>
+                </div>
               </Link>
             </motion.div>
           ))}
