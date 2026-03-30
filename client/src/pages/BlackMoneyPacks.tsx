@@ -69,14 +69,14 @@ export default function BlackMoneyPacks() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: idx * 0.1 }}
               viewport={{ once: true }}
-              className="premium-card"
+              className="bg-card text-card-foreground rounded-lg border border-border p-6 transition-all duration-300 shadow-md hover:shadow-lg hover:border-primary/50 hover:-translate-y-1"
             >
               <div className="text-4xl mb-4">{pack.icon}</div>
 
               <h3 className="text-2xl font-bold text-primary mb-2">{pack.name}</h3>
 
               <div className="mb-6 pb-6 border-b border-border">
-                <div className="price-display text-primary mb-2">{pack.price}</div>
+                <div className="text-4xl md:text-5xl font-bold text-primary mb-2">{pack.price}</div>
                 <p className="text-sm text-foreground/60">One-time purchase</p>
               </div>
 
@@ -102,7 +102,7 @@ export default function BlackMoneyPacks() {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="premium-card"
+            className="bg-card text-card-foreground rounded-lg border border-border p-6 transition-all duration-300 shadow-md hover:shadow-lg hover:border-primary/50 hover:-translate-y-1"
           >
             <h2 className="text-2xl font-bold text-primary mb-4">About Black Money Packs</h2>
             <p className="text-foreground/70 mb-6">

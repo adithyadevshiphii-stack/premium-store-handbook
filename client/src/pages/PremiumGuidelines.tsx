@@ -82,7 +82,7 @@ export default function PremiumGuidelines() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: idx * 0.05 }}
               viewport={{ once: true }}
-              className="premium-card"
+              className="bg-card text-card-foreground rounded-lg border border-border p-6 transition-all duration-300 shadow-md hover:shadow-lg hover:border-primary/50 hover:-translate-y-1"
             >
               <div className="flex items-start gap-4">
                 <span className="text-4xl flex-shrink-0">{guideline.icon}</span>
@@ -105,11 +105,11 @@ export default function PremiumGuidelines() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="section-title">Important Notes</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">Important Notes</h2>
           </motion.div>
 
           <div className="space-y-6">
-            <div className="premium-card border-l-4 border-l-accent">
+            <div className="bg-card text-card-foreground rounded-lg border border-border p-6 transition-all duration-300 shadow-md hover:shadow-lg hover:border-primary/50 hover:-translate-y-1 border-l-4 border-l-accent">
               <h3 className="text-lg font-bold text-accent mb-2">Custom Assets Approval</h3>
               <p className="text-foreground/70">
                 All custom houses, MLOs, outfits, jackets, and vehicles are subject to staff approval. Ensure your custom
@@ -117,7 +117,7 @@ export default function PremiumGuidelines() {
               </p>
             </div>
 
-            <div className="premium-card border-l-4 border-l-destructive">
+            <div className="bg-card text-card-foreground rounded-lg border border-border p-6 transition-all duration-300 shadow-md hover:shadow-lg hover:border-primary/50 hover:-translate-y-1 border-l-4 border-l-destructive">
               <h3 className="text-lg font-bold text-destructive mb-2">Responsible Usage</h3>
               <p className="text-foreground/70">
                 Aircraft, boats, special vehicles, weapons, and consumables must be used responsibly within roleplay
@@ -125,7 +125,7 @@ export default function PremiumGuidelines() {
               </p>
             </div>
 
-            <div className="premium-card border-l-4 border-l-primary">
+            <div className="bg-card text-card-foreground rounded-lg border border-border p-6 transition-all duration-300 shadow-md hover:shadow-lg hover:border-primary/50 hover:-translate-y-1 border-l-4 border-l-primary">
               <h3 className="text-lg font-bold text-primary mb-2">Renewal & Expiry</h3>
               <p className="text-foreground/70">
                 Premium benefits expire when the duration ends. Renew your package before expiry to maintain continuous

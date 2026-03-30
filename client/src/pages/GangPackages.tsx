@@ -118,7 +118,7 @@ export default function GangPackages() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: idx * 0.05 }}
               viewport={{ once: true }}
-              className={`premium-card ${pkg.featured ? "featured-card border-l-4 border-l-destructive" : ""}`}
+              className={`bg-card text-card-foreground rounded-lg border border-border p-6 transition-all duration-300 shadow-md hover:shadow-lg hover:border-primary/50 hover:-translate-y-1 ${pkg.featured ? "border-l-4 border-l-destructive" : ""}`}
             >
               <div className="flex items-start justify-between mb-6">
                 <div>
@@ -135,7 +135,7 @@ export default function GangPackages() {
               </div>
 
               <div className="mb-6 pb-6 border-b border-border">
-                <div className="price-display mb-2">{pkg.price}</div>
+                <div className="text-4xl md:text-5xl font-bold mb-2">{pkg.price}</div>
                 <p className="text-sm text-foreground/60">{pkg.validity}</p>
                 <p className="text-xs text-foreground/50 mt-2">Renewal: {pkg.renewal}</p>
               </div>
@@ -165,11 +165,11 @@ export default function GangPackages() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="section-title">Why Gang Packages?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">Why Gang Packages?</h2>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-            <div className="premium-card">
+            <div className="bg-card text-card-foreground rounded-lg border border-border p-6 transition-all duration-300 shadow-md hover:shadow-lg hover:border-primary/50 hover:-translate-y-1">
               <h3 className="text-lg font-bold text-primary mb-3">Complete Arsenal</h3>
               <p className="text-foreground/70">
                 Each package includes weapons, supplies, vehicles, and money—everything a gang needs for coordinated
@@ -177,7 +177,7 @@ export default function GangPackages() {
               </p>
             </div>
 
-            <div className="premium-card">
+            <div className="bg-card text-card-foreground rounded-lg border border-border p-6 transition-all duration-300 shadow-md hover:shadow-lg hover:border-primary/50 hover:-translate-y-1">
               <h3 className="text-lg font-bold text-primary mb-3">Leadership Hierarchy</h3>
               <p className="text-foreground/70">
                 Phone numbers are allocated for leaders and co-leaders, establishing clear organizational structure and
@@ -185,7 +185,7 @@ export default function GangPackages() {
               </p>
             </div>
 
-            <div className="premium-card">
+            <div className="bg-card text-card-foreground rounded-lg border border-border p-6 transition-all duration-300 shadow-md hover:shadow-lg hover:border-primary/50 hover:-translate-y-1">
               <h3 className="text-lg font-bold text-primary mb-3">Progression System</h3>
               <p className="text-foreground/70">
                 Start with Starter, grow to Dominance, and reach Empire status. Each tier represents stronger gang
@@ -193,7 +193,7 @@ export default function GangPackages() {
               </p>
             </div>
 
-            <div className="premium-card">
+            <div className="bg-card text-card-foreground rounded-lg border border-border p-6 transition-all duration-300 shadow-md hover:shadow-lg hover:border-primary/50 hover:-translate-y-1">
               <h3 className="text-lg font-bold text-primary mb-3">Better Than Separate</h3>
               <p className="text-foreground/70">
                 Buying a gang package is always more efficient than purchasing vehicles, weapons, and supplies
@@ -208,7 +208,7 @@ export default function GangPackages() {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="premium-card overflow-x-auto"
+            className="bg-card text-card-foreground rounded-lg border border-border p-6 transition-all duration-300 shadow-md hover:shadow-lg hover:border-primary/50 hover:-translate-y-1 overflow-x-auto"
           >
             <h3 className="text-lg font-bold text-primary mb-4">Tier Comparison</h3>
             <table className="w-full text-sm">
@@ -288,7 +288,7 @@ export default function GangPackages() {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="premium-card border-l-4 border-l-accent"
+          className="bg-card text-card-foreground rounded-lg border border-border p-6 transition-all duration-300 shadow-md hover:shadow-lg hover:border-primary/50 hover:-translate-y-1 border-l-4 border-l-accent"
         >
           <h3 className="text-lg font-bold text-accent mb-3">Important Notes</h3>
           <ul className="space-y-3">

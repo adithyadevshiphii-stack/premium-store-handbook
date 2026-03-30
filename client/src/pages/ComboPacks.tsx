@@ -76,7 +76,7 @@ export default function ComboPacks() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: idx * 0.05 }}
               viewport={{ once: true }}
-              className={`premium-card ${pack.featured ? "featured-card border-l-4 border-l-primary" : ""}`}
+              className={`bg-card text-card-foreground rounded-lg border border-border p-6 transition-all duration-300 shadow-md hover:shadow-lg hover:border-primary/50 hover:-translate-y-1 ${pack.featured ? "border-l-4 border-l-primary" : ""}`}
             >
               <div className="flex items-start justify-between mb-6">
                 <div>
@@ -91,7 +91,7 @@ export default function ComboPacks() {
               </div>
 
               <div className="mb-6 pb-6 border-b border-border">
-                <div className="price-display text-primary mb-2">{pack.price}</div>
+                <div className="text-4xl md:text-5xl font-bold text-primary mb-2">{pack.price}</div>
                 <p className="text-sm text-foreground/60">One-time purchase</p>
               </div>
 
@@ -120,11 +120,11 @@ export default function ComboPacks() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="section-title">Why Combos Are Better</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">Why Combos Are Better</h2>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-            <div className="premium-card">
+            <div className="bg-card text-card-foreground rounded-lg border border-border p-6 transition-all duration-300 shadow-md hover:shadow-lg hover:border-primary/50 hover:-translate-y-1">
               <h3 className="text-lg font-bold text-primary mb-3">Complete Supply Bundle</h3>
               <p className="text-foreground/70">
                 Combo packs combine weapons, joints, and cocaine into one purchase. This is more efficient than buying
@@ -132,7 +132,7 @@ export default function ComboPacks() {
               </p>
             </div>
 
-            <div className="premium-card">
+            <div className="bg-card text-card-foreground rounded-lg border border-border p-6 transition-all duration-300 shadow-md hover:shadow-lg hover:border-primary/50 hover:-translate-y-1">
               <h3 className="text-lg font-bold text-primary mb-3">Superior Value</h3>
               <p className="text-foreground/70">
                 The combined price of a combo pack is always lower than purchasing AR, BIG C, and BIG J separately at
@@ -140,14 +140,14 @@ export default function ComboPacks() {
               </p>
             </div>
 
-            <div className="premium-card">
+            <div className="bg-card text-card-foreground rounded-lg border border-border p-6 transition-all duration-300 shadow-md hover:shadow-lg hover:border-primary/50 hover:-translate-y-1">
               <h3 className="text-lg font-bold text-primary mb-3">Gang Operations Ready</h3>
               <p className="text-foreground/70">
                 Combo packs provide everything a gang needs for coordinated operations in one convenient bundle.
               </p>
             </div>
 
-            <div className="premium-card">
+            <div className="bg-card text-card-foreground rounded-lg border border-border p-6 transition-all duration-300 shadow-md hover:shadow-lg hover:border-primary/50 hover:-translate-y-1">
               <h3 className="text-lg font-bold text-primary mb-3">Progression Path</h3>
               <p className="text-foreground/70">
                 Start with Street Combo and progress to Domination Combo as your gang grows and needs more supplies.
@@ -161,7 +161,7 @@ export default function ComboPacks() {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="premium-card overflow-x-auto"
+            className="bg-card text-card-foreground rounded-lg border border-border p-6 transition-all duration-300 shadow-md hover:shadow-lg hover:border-primary/50 hover:-translate-y-1 overflow-x-auto"
           >
             <h3 className="text-lg font-bold text-primary mb-4">Value Breakdown</h3>
             <table className="w-full text-sm">

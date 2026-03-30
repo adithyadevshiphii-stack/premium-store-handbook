@@ -96,7 +96,7 @@ export default function BusinessOwnershipPackages() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: idx * 0.05 }}
               viewport={{ once: true }}
-              className={`premium-card ${pkg.featured ? "featured-card" : ""} border-l-4 ${pkg.borderColor}`}
+              className={`bg-card text-card-foreground rounded-lg border border-border p-6 transition-all duration-300 shadow-md hover:shadow-lg hover:border-primary/50 hover:-translate-y-1 ${pkg.featured ? "border-l-4 border-l-primary" : ""} border-l-4 ${pkg.borderColor}`}
             >
               <div className="flex items-start justify-between mb-6">
                 <div>
@@ -111,7 +111,7 @@ export default function BusinessOwnershipPackages() {
               </div>
 
               <div className="mb-6 pb-6 border-b border-border">
-                <div className="price-display mb-2">{pkg.price}</div>
+                <div className="text-4xl md:text-5xl font-bold mb-2">{pkg.price}</div>
                 <p className="text-sm text-foreground/60">{pkg.validity}</p>
                 <p className="text-xs text-foreground/50 mt-2">Renewal: {pkg.renewal}</p>
               </div>
@@ -141,11 +141,11 @@ export default function BusinessOwnershipPackages() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="section-title">Why Business Packages?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">Why Business Packages?</h2>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-            <div className="premium-card">
+            <div className="bg-card text-card-foreground rounded-lg border border-border p-6 transition-all duration-300 shadow-md hover:shadow-lg hover:border-primary/50 hover:-translate-y-1">
               <h3 className="text-lg font-bold text-primary mb-3">Ownership Slots</h3>
               <p className="text-foreground/70">
                 Each package grants one business ownership slot, allowing you to establish and manage a legitimate
@@ -153,7 +153,7 @@ export default function BusinessOwnershipPackages() {
               </p>
             </div>
 
-            <div className="premium-card">
+            <div className="bg-card text-card-foreground rounded-lg border border-border p-6 transition-all duration-300 shadow-md hover:shadow-lg hover:border-primary/50 hover:-translate-y-1">
               <h3 className="text-lg font-bold text-primary mb-3">Progression Path</h3>
               <p className="text-foreground/70">
                 Start with Starter, grow to Growth, and reach Elite status. Each tier unlocks better assets and
@@ -161,7 +161,7 @@ export default function BusinessOwnershipPackages() {
               </p>
             </div>
 
-            <div className="premium-card">
+            <div className="bg-card text-card-foreground rounded-lg border border-border p-6 transition-all duration-300 shadow-md hover:shadow-lg hover:border-primary/50 hover:-translate-y-1">
               <h3 className="text-lg font-bold text-primary mb-3">MLO Access</h3>
               <p className="text-foreground/70">
                 Only the Elite package includes an open MLO (Map Location Object) for a fully customized business
@@ -169,7 +169,7 @@ export default function BusinessOwnershipPackages() {
               </p>
             </div>
 
-            <div className="premium-card">
+            <div className="bg-card text-card-foreground rounded-lg border border-border p-6 transition-all duration-300 shadow-md hover:shadow-lg hover:border-primary/50 hover:-translate-y-1">
               <h3 className="text-lg font-bold text-primary mb-3">Blip Access</h3>
               <p className="text-foreground/70">
                 All tiers include a custom car with blip access, making your business location easily identifiable on
@@ -184,7 +184,7 @@ export default function BusinessOwnershipPackages() {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="premium-card"
+            className="bg-card text-card-foreground rounded-lg border border-border p-6 transition-all duration-300 shadow-md hover:shadow-lg hover:border-primary/50 hover:-translate-y-1"
           >
             <h3 className="text-lg font-bold text-primary mb-4">Tier Comparison</h3>
             <div className="overflow-x-auto">

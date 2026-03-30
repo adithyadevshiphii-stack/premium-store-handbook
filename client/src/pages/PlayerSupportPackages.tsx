@@ -133,7 +133,7 @@ export default function PlayerSupportPackages() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: idx * 0.05 }}
               viewport={{ once: true }}
-              className={`premium-card ${pkg.featured ? "featured-card" : ""} border-l-4 ${pkg.borderColor}`}
+              className={`bg-card text-card-foreground rounded-lg border border-border p-6 transition-all duration-300 shadow-md hover:shadow-lg hover:border-primary/50 hover:-translate-y-1 ${pkg.featured ? "border-l-4 border-l-primary" : ""} border-l-4 ${pkg.borderColor}`}
             >
               <div className="flex items-start justify-between mb-6">
                 <div>
@@ -150,7 +150,7 @@ export default function PlayerSupportPackages() {
               </div>
 
               <div className="mb-6 pb-6 border-b border-border">
-                <div className="price-display mb-2">{pkg.price}</div>
+                <div className="text-4xl md:text-5xl font-bold mb-2">{pkg.price}</div>
                 <p className="text-sm text-foreground/60">{pkg.validity}</p>
               </div>
 
@@ -179,11 +179,11 @@ export default function PlayerSupportPackages() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="section-title">Why These Packages?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">Why These Packages?</h2>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="premium-card">
+            <div className="bg-card text-card-foreground rounded-lg border border-border p-6 transition-all duration-300 shadow-md hover:shadow-lg hover:border-primary/50 hover:-translate-y-1">
               <h3 className="text-lg font-bold text-primary mb-3">Value Progression</h3>
               <p className="text-foreground/70">
                 Each tier builds on the previous one, offering more assets, higher money amounts, and better phone
@@ -191,7 +191,7 @@ export default function PlayerSupportPackages() {
               </p>
             </div>
 
-            <div className="premium-card">
+            <div className="bg-card text-card-foreground rounded-lg border border-border p-6 transition-all duration-300 shadow-md hover:shadow-lg hover:border-primary/50 hover:-translate-y-1">
               <h3 className="text-lg font-bold text-primary mb-3">Bundle Advantage</h3>
               <p className="text-foreground/70">
                 Buying a full package is always more efficient than purchasing items separately. The Elite and Supreme
@@ -199,7 +199,7 @@ export default function PlayerSupportPackages() {
               </p>
             </div>
 
-            <div className="premium-card">
+            <div className="bg-card text-card-foreground rounded-lg border border-border p-6 transition-all duration-300 shadow-md hover:shadow-lg hover:border-primary/50 hover:-translate-y-1">
               <h3 className="text-lg font-bold text-primary mb-3">Asset Variety</h3>
               <p className="text-foreground/70">
                 From basic cars and bikes to helicopters, planes, and custom houses, these packages provide diverse
@@ -207,7 +207,7 @@ export default function PlayerSupportPackages() {
               </p>
             </div>
 
-            <div className="premium-card">
+            <div className="bg-card text-card-foreground rounded-lg border border-border p-6 transition-all duration-300 shadow-md hover:shadow-lg hover:border-primary/50 hover:-translate-y-1">
               <h3 className="text-lg font-bold text-primary mb-3">Money Management</h3>
               <p className="text-foreground/70">
                 Both white money and black money are included in higher tiers, giving players flexibility in their

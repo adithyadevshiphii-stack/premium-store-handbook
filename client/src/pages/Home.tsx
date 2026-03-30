@@ -80,7 +80,7 @@ export default function Home() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="section-title">Browse All Sections</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">Browse All Sections</h2>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -94,8 +94,8 @@ export default function Home() {
             >
               <Link href={section.href}>
                 <a
-                  className={`premium-card group block h-full ${
-                    section.highlight ? "featured-card" : ""
+                  className={`bg-card text-card-foreground rounded-lg border border-border p-6 transition-all duration-300 shadow-md hover:shadow-lg hover:border-primary/50 hover:-translate-y-1 group block h-full ${
+                    section.highlight ? "border-l-4 border-l-primary" : ""
                   }`}
                 >
                   <div className="flex items-start justify-between mb-4">
@@ -132,7 +132,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="section-title">Why Choose Premium?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">Why Choose Premium?</h2>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -159,7 +159,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: idx * 0.1 }}
                 viewport={{ once: true }}
-                className="premium-card"
+                className="bg-card text-card-foreground rounded-lg border border-border p-6 transition-all duration-300 shadow-md hover:shadow-lg hover:border-primary/50 hover:-translate-y-1"
               >
                 <h3 className="text-lg font-bold text-primary mb-3">{feature.title}</h3>
                 <p className="text-foreground/70">{feature.description}</p>
