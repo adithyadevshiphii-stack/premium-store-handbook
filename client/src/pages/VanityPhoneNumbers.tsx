@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { ChevronLeft } from "lucide-react";
 
-export default function VanityPhoneNumbers() {
+export default function PhoneNumbers() {
   const packages = [
     { digits: "4 digit", price: "₹100", validity: "4 months" },
     { digits: "3 digit", price: "₹200", validity: "4 months" },
@@ -20,7 +20,7 @@ export default function VanityPhoneNumbers() {
               <span className="font-semibold">Back</span>
             </a>
           </Link>
-          <h1 className="text-lg font-bold text-primary">Vanity Phone Numbers</h1>
+          <h1 className="text-lg font-bold text-primary">Phone Numbers</h1>
           <div className="w-20" />
         </div>
       </nav>
@@ -33,7 +33,7 @@ export default function VanityPhoneNumbers() {
           transition={{ duration: 0.6 }}
         >
           <h1 className="text-5xl md:text-6xl font-bold text-primary mb-6">
-            Vanity Phone Numbers
+            Phone Numbers
           </h1>
           <p className="text-lg text-foreground/70 max-w-2xl">
             Short numbers are simple add-on purchases. Keep the value ladder clear with premium digit counts.

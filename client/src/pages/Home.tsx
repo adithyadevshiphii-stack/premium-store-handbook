@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 const sections = [
   { title: "Premium Guidelines", href: "/premium-guidelines", icon: "📋", desc: "Server rules and approval process" },
-  { title: "Vanity Phone Numbers", href: "/vanity-phone-numbers", icon: "📱", desc: "Custom phone numbers" },
+  { title: "Phone Numbers", href: "/vanity-phone-numbers", icon: "📱", desc: "Custom phone numbers" },
   { title: "Player Support Packages", href: "/player-support-packages", icon: "⭐", desc: "Support tier packages", highlight: true },
   { title: "Black Money Packs", href: "/black-money-packs", icon: "💰", desc: "Illicit currency bundles" },
   { title: "AR Weapon Packages", href: "/ar-weapon-packages", icon: "🔫", desc: "Assault rifle collections" },
