@@ -1,7 +1,8 @@
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { motion } from "framer-motion";
 import { ChevronRight, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useRef } from "react";
 
 const sections = [
   { title: "Premium Guidelines", href: "/premium-guidelines", icon: "📋", desc: "Server rules and approval process" },
@@ -38,6 +39,17 @@ const itemVariants = {
 };
 
 export default function Home() {
+  const [, navigate] = useLocation();
+  const packagesRef = useRef<HTMLDivElement>(null);
+
+  const handleExplorePackages = () => {
+    packagesRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const handleReadGuidelines = () => {
+    navigate("/premium-guidelines");
+  };
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Navigation */}
@@ -113,6 +125,7 @@ export default function Home() {
               <Button
                 size="lg"
                 className="premium-btn text-lg px-8 py-6 h-auto"
+                onClick={handleExplorePackages}
               >
                 Explore Packages
                 <ChevronRight size={20} className="ml-2" />
@@ -121,6 +134,7 @@ export default function Home() {
                 size="lg"
                 variant="outline"
                 className="border-primary/50 hover:border-primary text-lg px-8 py-6 h-auto"
+                onClick={handleReadGuidelines}
               >
                 Read Guidelines
               </Button>
@@ -133,7 +147,7 @@ export default function Home() {
       <div className="section-divider" />
 
       {/* Sections Grid */}
-      <section className="container py-32">
+      <section className="container py-32" ref={packagesRef}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
