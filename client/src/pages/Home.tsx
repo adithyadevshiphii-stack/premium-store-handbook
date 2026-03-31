@@ -226,7 +226,7 @@ export default function Home() {
           <p className="text-lg text-foreground/70 mb-8 max-w-2xl mx-auto">
             Choose your perfect package and unlock exclusive benefits. All purchases come with staff approval and full support.
           </p>
-          <Button size="lg" className="premium-btn text-lg px-8 py-6 h-auto">
+          <Button size="lg" className="premium-btn text-lg px-8 py-6 h-auto" onClick={handleExplorePackages}>
             View All Packages
             <ChevronRight size={20} className="ml-2" />
           </Button>

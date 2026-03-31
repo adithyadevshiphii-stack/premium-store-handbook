@@ -17,10 +17,10 @@ export default function ARWeaponPackages() {
       <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
         <div className="container py-4 flex items-center justify-between">
           <Link href="/">
-            <a className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+            <div className="flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer">
               <ChevronLeft size={20} />
               <span className="font-semibold">Back</span>
-            </a>
+            </div>
           </Link>
           <h1 className="text-lg font-bold text-primary">AR Weapon Packages</h1>
           <div className="w-20" />

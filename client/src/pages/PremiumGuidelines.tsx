@@ -46,10 +46,10 @@ export default function PremiumGuidelines() {
       <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
         <div className="container py-4 flex items-center justify-between">
           <Link href="/">
-            <a className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+            <div className="flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer">
               <ChevronLeft size={20} />
               <span className="font-semibold">Back</span>
-            </a>
+            </div>
           </Link>
           <h1 className="text-lg font-bold text-primary">Premium Guidelines</h1>
           <div className="w-20" />
@@ -150,11 +150,11 @@ export default function PremiumGuidelines() {
             Explore our premium packages and find the perfect bundle for your playstyle.
           </p>
           <Link href="/player-support-packages">
-            <a>
+            <div>
               <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
                 Browse Support Packages
               </Button>
-            </a>
+            </div>
           </Link>
         </motion.div>
       </section>
