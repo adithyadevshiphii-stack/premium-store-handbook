@@ -69,8 +69,13 @@ export default function Home() {
             </div>
           </motion.div>
           <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }}>
-            <Button variant="outline" size="sm" className="border-primary/50 hover:border-primary">
-              Contact Support
+            <Button 
+              variant="outline" 
+              size="sm" 
+              className="border-primary/50 hover:border-primary"
+              onClick={() => window.open('https://discord.com/channels/891722282756624434/1488135767846031410', '_blank')}
+            >
+              RAISE PREMIUM TICKET HERE
             </Button>
           </motion.div>
         </div>
