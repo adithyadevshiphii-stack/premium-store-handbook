@@ -92,11 +92,6 @@ export default function CustomHouseAccess() {
                 </ul>
               </div>
 
-              <div>
-                <p className="text-xs font-semibold text-foreground/60 mb-2 uppercase">Effective Rate</p>
-                <p className="text-lg font-bold text-accent">{pkg.pricePerMonth}</p>
-              </div>
-
               {pkg.highlight && (
                 <div className="mt-6 pt-6 border-t border-border">
                   <span className="text-xs font-bold text-primary bg-primary/10 px-3 py-1 rounded">
