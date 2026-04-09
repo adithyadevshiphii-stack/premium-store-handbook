@@ -15,7 +15,7 @@ export default function PlayerSupportPackages() {
       borderColor: "border-l-blue-400",
       items: [
         "4 digit phone number",
-        "White money - 1 Crore",
+        "White money - 3 Crore",
         "1 premium car",
         "1 custom number plate",
       ],
@@ -28,7 +28,7 @@ export default function PlayerSupportPackages() {
       borderColor: "border-l-cyan-400",
       items: [
         "3 digit phone number",
-        "White money - 2 Crore",
+        "White money - 6 Crore",
         "2 premium cars",
         "2 premium bikes",
         "4 custom number plates",
@@ -43,8 +43,8 @@ export default function PlayerSupportPackages() {
       featured: true,
       items: [
         "3 digit phone number",
-        "White money - 4 Crore",
-        "Black money - 1 Crore",
+        "White money - 12 Crore",
+        "Black money - 2 Crore",
         "3 premium cars",
         "3 premium bikes",
         "1 helicopter",
@@ -59,8 +59,8 @@ export default function PlayerSupportPackages() {
       borderColor: "border-l-amber-400",
       items: [
         "2 digit phone number",
-        "White money - 5 Crore",
-        "Black money - 2 Crore",
+        "White money - 15 Crore",
+        "Black money - 3 Crore",
         "4 premium cars",
         "4 premium bikes",
         "1 helicopter",
@@ -79,8 +79,8 @@ export default function PlayerSupportPackages() {
       featured: true,
       items: [
         "2 digit phone number",
-        "White money - 8 Crore",
-        "Black money - 3 Crore",
+        "White money - 25 Crore",
+        "Black money - 5 Crore",
         "5 premium cars",
         "5 premium bikes",
         "1 custom helicopter",
