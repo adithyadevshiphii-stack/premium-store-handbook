@@ -44,7 +44,6 @@ export default function PlayerSupportPackages() {
       items: [
         "3 digit phone number",
         "White money - 12 Crore",
-        "Black money - 2 Crore",
         "3 premium cars",
         "3 premium bikes",
         "1 helicopter",
@@ -60,7 +59,6 @@ export default function PlayerSupportPackages() {
       items: [
         "2 digit phone number",
         "White money - 15 Crore",
-        "Black money - 3 Crore",
         "4 premium cars",
         "4 premium bikes",
         "1 helicopter",
@@ -80,7 +78,6 @@ export default function PlayerSupportPackages() {
       items: [
         "2 digit phone number",
         "White money - 25 Crore",
-        "Black money - 5 Crore",
         "5 premium cars",
         "5 premium bikes",
         "1 custom helicopter",
