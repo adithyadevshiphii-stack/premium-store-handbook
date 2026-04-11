@@ -60,9 +60,7 @@ export default function Home() {
             animate={{ opacity: 1, x: 0 }}
             className="flex items-center gap-3"
           >
-            <div className="w-12 h-12 bg-gradient-to-br from-primary via-primary/80 to-accent rounded-xl flex items-center justify-center shadow-lg glow-primary">
-              <span className="text-background font-black text-lg tracking-wider">PSH</span>
-            </div>
+            <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663494392763/FtFaQwREi5ZpTonTRx3Xud/IMG_4910_072e1b9b.png" alt="SPADIKAM" className="w-14 h-14 object-contain" />
             <div>
               <h1 className="text-xl font-bold gradient-text">Premium Store</h1>
               <p className="text-xs text-foreground/60">Official Handbook</p>
