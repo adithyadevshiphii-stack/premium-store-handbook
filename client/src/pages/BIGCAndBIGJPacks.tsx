@@ -4,15 +4,15 @@ import { ChevronLeft } from "lucide-react";
 
 export default function BIGCAndBIGJPacks() {
   const jPacks = [
-    { name: "BIG J Small", amount: "100 Joint", price: "₹300", icon: "🌿" },
-    { name: "BIG J Medium", amount: "250 Joint", price: "₹650", icon: "🌿" },
-    { name: "BIG J Large", amount: "400 Joint", price: "₹950", icon: "🌿" },
+    { name: "BIG J Small", amount: "100 Joint", price: "₹150", icon: "🌿" },
+    { name: "BIG J Medium", amount: "250 Joint", price: "₹350", icon: "🌿" },
+    { name: "BIG J Large", amount: "400 Joint", price: "₹500", icon: "🌿" },
   ];
 
   const cPacks = [
-    { name: "BIG C Small", amount: "100 Cocaine", price: "₹300", icon: "❄️" },
-    { name: "BIG C Medium", amount: "250 Cocaine", price: "₹650", icon: "❄️" },
-    { name: "BIG C Large", amount: "400 Cocaine", price: "₹950", icon: "❄️" },
+    { name: "BIG C Small", amount: "100 Cocaine", price: "₹150", icon: "❄️" },
+    { name: "BIG C Medium", amount: "250 Cocaine", price: "₹350", icon: "❄️" },
+    { name: "BIG C Large", amount: "400 Cocaine", price: "₹500", icon: "❄️" },
   ];
 
   return (
