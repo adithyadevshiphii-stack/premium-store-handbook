@@ -4,11 +4,11 @@ import { ChevronLeft } from "lucide-react";
 
 export default function ARWeaponPackages() {
   const packs = [
-    { name: "Street Pack", count: "5 AR", price: "₹600", icon: "🔫" },
-    { name: "Push Pack", count: "10 AR", price: "₹1100", icon: "🔫" },
-    { name: "War Pack", count: "20 AR", price: "₹1900", icon: "🔫" },
-    { name: "Control Pack", count: "35 AR", price: "₹2900", icon: "🔫" },
-    { name: "Domination Pack", count: "50 AR", price: "₹3900", icon: "🔫" },
+    { name: "Street Pack", count: "10 AR", price: "₹600", icon: "🔫" },
+    { name: "Push Pack", count: "20 AR", price: "₹1100", icon: "🔫" },
+    { name: "War Pack", count: "40 AR", price: "₹1900", icon: "🔫" },
+    { name: "Control Pack", count: "70 AR", price: "₹2900", icon: "🔫" },
+    { name: "Domination Pack", count: "100 AR", price: "₹3900", icon: "🔫" },
   ];
 
   return (
